@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Physical Health</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #66bb6a, #4caf50);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #388e3c;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInHeader 1.5s forwards;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+
+        /* Section Style */
+        .section {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #43a047;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover {
+            background-color: #388e3c;
+        }
+
+        .section-header span {
+            font-size: 1.5rem;
+        }
+
+        .details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f1f8e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .details img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .details img:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: #388e3c;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h2:hover {
+            transform: translateX(10px);
+        }
+
+        footer {
+            background-color: #388e3c;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Header fadeIn animation */
+        @keyframes fadeInHeader {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth Fade-in for Sections */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Hover effects */
+        .section-header h2 {
+            transition: transform 0.3s ease;
+        }
+
+        .section-header:hover h2 {
+            transform: translateX(10px);
+        }
+
+        .details ul {
+            list-style: inside;
+            padding-left: 20px;
+        }
+
+        .details ul li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .section-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Physical Health</h1>
+            <p>Your journey to a healthy body and mind starts here.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+
+        <!-- Fitness Section -->
+        <div class="section" id="fitness" onclick="toggleDetails('fitness-details', this)">
+            <div class="section-header">
+                <h2>Fitness & Exercise</h2>
+                <span>&#9660;</span>
+            </div>
+            <div id="fitness-details" class="details">
+                <p>Regular physical activity is essential for maintaining good health. Whether it's strength training, cardio, or flexibility exercises, staying active improves overall well-being.</p>
+                <ul>
+                    <li><strong>Strength Training:</strong> Increases muscle strength and metabolism.</li>
+                    <li><strong>Cardio:</strong> Boosts cardiovascular health and endurance.</li>
+                    <li><strong>Flexibility:</strong> Improves mobility and reduces injury risk.</li>
+                    <li><strong>Balance Exercises:</strong> Enhance coordination and stability.</li>
+                </ul>
+                <img src="https://via.placeholder.com/600x400/81c784/ffffff?text=Fitness+and+Exercise" alt="Fitness and Exercise">
+            </div>
+        </div>
+
+        <!-- Nutrition Section -->
+        <div class="section" id="nutrition" onclick="toggleDetails('nutrition-details', this)">
+            <div class="section-header">
+                <h2>Nutrition & Healthy Eating</h2>
+                <span>&#9660;</span>
+            </div>
+            <div id="nutrition-details" class="details">
+                <p>Healthy nutrition is key to maintaining physical health. Eating a balanced diet provides your body with the nutrients it needs to function effectively and efficiently.</p>
+                <ul>
+                    <li><strong>Macronutrients:</strong> Proteins, carbs, and fats for energy and repair.</li>
+                    <li><strong>Micronutrients:</strong> Vitamins and minerals to support health.</li>
+                    <li><strong>Hydration:</strong> Drinking water is essential for proper bodily functions.</li>
+                    <li><strong>Healthy Fats:</strong> Important for brain function and cell health.</li>
+                </ul>
+                <img src="https://via.placeholder.com/600x400/66bb6a/ffffff?text=Healthy+Eating" alt="Healthy Eating">
+            </div>
+        </div>
+
+        <!-- Sleep Section -->
+        <div class="section" id="sleep" onclick="toggleDetails('sleep-details', this)">
+            <div class="section-header">
+                <h2>Sleep & Recovery</h2>
+                <span>&#9660;</span>
+            </div>
+            <div id="sleep-details" class="details">
+                <p>Quality sleep is essential for physical recovery. Sleep allows your body to repair muscles, regulate hormones, and restore energy levels, which is vital for overall health.</p>
+                <ul>
+                    <li><strong>Sleep Hygiene:</strong> Stick to a regular sleep schedule.</li>
+                    <li><strong>Restful Sleep:</strong> Avoid caffeine and electronics before bedtime.</li>
+                    <li><strong>Recovery Days:</strong> Let your body rest after intense workouts.</li>
+                </ul>
+                <img src="https://via.placeholder.com/600x400/81c784/ffffff?text=Rest+and+Recovery" alt="Sleep and Recovery">
+            </div>
+        </div>
+
+        <!-- Well-being Section -->
+        <div class="section" id="wellbeing" onclick="toggleDetails('wellbeing-details', this)">
+            <div class="section-header">
+                <h2>Overall Well-being</h2>
+                <span>&#9660;</span>
+            </div>
+            <div id="wellbeing-details" class="details">
+                <p>Physical well-being involves both body and mind. A healthy lifestyle includes managing stress, staying socially active, and monitoring overall health regularly.</p>
+                <ul>
+                    <li><strong>Stress Management:</strong> Mindfulness and relaxation techniques.</li>
+                    <li><strong>Social Connections:</strong> Build positive relationships.</li>
+                    <li><strong>Routine Checkups:</strong> Preventive health checks are crucial.</li>
+                </ul>
+                <img src="https://via.placeholder.com/600x400/66bb6a/ffffff?text=Well-being" alt="Well-being">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Physical Health. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id, element) {
+            var details = document.getElementById(id);
+            var section = element.closest('.section');
+
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+                section.classList.remove('expanded');
+            } else {
+                details.style.display = 'block';
+                section.classList.add('expanded');
+            }
+        }
+
+        // Fade in effect when the page loads
+        window.onload = function () {
+            document.querySelectorAll('.section').forEach(function (section) {
+                section.classList.add('visible');
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
